@@ -1,0 +1,296 @@
+:root {
+	--bg: #f4f6f9;
+	--text: #444;
+	--text-large: #333;
+	--color1: #ff2261;
+	--color2: #2261ff;
+	--color3: #efe300;
+	--grey-10: #eceee8;
+	
+	--gutter: 5%;
+	
+	--regular-font: "Emy Slab", serif;
+	--accent-font: "Bilbao", sans-serif;
+	--logo-font: Bilbao, sans-serif;
+    color-scheme: light dark;
+}
+
+body {
+	background: var(--bg);
+	color: var(--text);
+	font-family: var(--regular-font);
+	font-size: 1em;
+	margin: 0;
+	padding: 0;
+}
+
+@media (min-width:25em) {
+	body {
+		font-size: 1.125em;
+	}
+}
+
+@media (min-width:40em) {
+	body {
+		--gutter: 7.5%;
+		font-size: 1.25em;
+	}
+}
+
+@media (min-width:60em) {
+	body {
+		font-size: 1.5em;
+	}
+}
+
+body, caption, th, td, input, textarea, select, option, legend, fieldset, h1, h2, h3, h4, h5, h6 {
+	font-size-adjust: 0.5;
+}
+
+.site {
+	font-size: 1em;
+	line-height: 1.25;
+	padding: 0;
+}
+
+@media (min-width: 43.75em) {
+	.site {
+		font-size: 1em;
+		line-height: 1.375;
+	}
+}
+
+h1,h2 {
+	font-size: 2em;
+	line-height: 1.25;
+}
+
+@media (min-width: 43.75em) {
+	h1,h2 {
+		font-size: 2.5em;
+		line-height: 1.125;
+	}
+}
+
+@media (min-width: 56.25em) {
+	h1,h2 {
+		font-size: 3em;
+		line-height: 1.05;
+	}
+}
+/*
+h2 {
+	font-size: 1.625em;
+	line-height: 1.15384615;
+}
+
+@media (min-width: 43.75em) {
+	h2 {
+		font-size: 2em;
+		line-height: 1.25;
+	}
+}
+
+@media (min-width: 56.25em) {
+	h2 {
+		font-size: 2.25em;
+		line-height: 1.25;
+	}
+}*/
+
+h3 {
+	font-size: 1.375em;
+	line-height: 1.13636364;
+}
+
+@media (min-width: 43.75em) {
+	h3 {
+		font-size: 1.5em;
+		line-height: 1.25;
+	}
+}
+
+@media (min-width: 56.25em) {
+	h3 {
+		font-size: 1.75em;
+		line-height: 1.25;
+	}
+}
+
+h4 {
+	font-size: 1.125em;
+	line-height: 1.11111111;
+}
+
+@media (min-width: 43.75em) {
+	h4 {
+		line-height: 1.22222222;
+	}
+}
+
+blockquote,
+.lead {
+	font-size: 1.25em;
+	line-height: 1.25;
+}
+
+@media (min-width: 43.75em) {
+	blockquote {
+		font-size: 1.5em;
+		line-height: 1.45833333;
+	}
+}
+
+h1,
+h2,
+h3 {
+	color: var(--text-large);
+	font-family: var(--accent-font);
+	font-weight: 750;
+}
+
+h1 {
+	color: var(--color1);
+	font-family: var(--logo-font);
+	font-weight: 850;
+}
+
+h2 {
+	color: var(--color2);
+	font-weight: 700;
+}
+
+h3 {
+	margin: 1.5em 0 .5em;
+}
+
+h3 + p {
+	margin-top: .5em;
+}
+
+.site > header {
+	background: var(--grey-10);
+	margin: 0 0 2em;
+	padding: .01em var(--gutter) 1em;
+}
+
+.site > article {
+	padding: .01em var(--gutter) 4em;
+}
+
+header h1::before {
+	content: "🂻";
+	font-size: 1.35em;
+	margin: -.15em .2em 0 -.1em;
+}
+
+article ul {
+	list-style: none;
+}
+
+article li::before,
+article h3::before {
+	color: var(--color2);
+	content: "◼︎";
+	margin: .2em .3em -.1em -.15em;
+}
+
+.action {
+	background-color: var(--color3);
+	padding: .5em 1em;
+}
+
+.lead:first-child {
+	margin-top: 3em;
+}
+
+.venn {
+	font-family: var(--accent-font);
+	font-weight: bold;
+	margin: 4em 2em;
+}
+
+.venn ul {
+	align-items: flex-end;
+	display: flex;
+	flex-wrap: wrap;
+	font-size: 1.25em;
+	justify-content: space-around;
+	padding: 5%;
+}
+
+.venn li {
+	background: var(--color1);
+	color: #fff;
+	border-radius: 50%;
+	flex: 1 1 width;
+	margin: -12.5%;
+	mix-blend-mode: multiply;
+	padding: 28.5% 0;
+	text-align: center;
+	width: 66%;
+}
+
+.venn li::before {
+	content: "";
+	/*display: inline-block;
+	float: left;
+	margin-left: -1px;
+	padding-bottom: 100%;
+	width: 1px;*/
+}
+
+.venn li:nth-child(2) {
+	background-color: var(--color2);
+}
+
+.venn li:nth-child(3) {
+	background-color: var(--color3);
+	color: var(--text);
+}
+
+@media (min-width:40em) and (min-height:30em) {
+	body {
+		overflow: hidden;
+	}
+	.site {
+		display: grid;
+		grid-template-columns: minmax(15em, 20%) 1fr;
+		grid-template-rows: 95vh 5vh;
+		overflow: hidden;
+		padding: 0;
+	}
+	.site > header {
+		box-sizing: border-box;
+		display: flex;
+		flex-direction: column;
+		grid-row: 1 / span 2;
+		margin: 0;
+		max-width: 25em;
+		min-width: 13em;
+		padding: 0 10% 2em;
+		width: 20%;
+	}
+	.site > header h2 {
+		margin-top: auto;
+	}
+	.site > article {
+		grid-row: 1 span 1;
+		overflow-y: auto;
+		padding-left: 0;
+		padding-right: 10%;
+	}
+	.site > footer {
+		grid-row: 2 span 1;
+		margin: auto 0 0;
+		width: 100%;
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--bg: #333;
+		--text: #ccc;
+		--text-large: #ddd;
+	}
+}
