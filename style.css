@@ -308,5 +308,11 @@ article h3::before {
 		--bg: #333;
 		--text: #ccc;
 		--text-large: #ddd;
+		--grey-10: #222;
+	}
+
+	.site .venn li {
+		color: black;
+		mix-blend-mode: screen;
 	}
 }
