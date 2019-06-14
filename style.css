@@ -2,9 +2,9 @@
 	--bg: #f4f6f9;
 	--text: #444;
 	--text-large: #333;
-	--color2: #ff2261;
-	--color1: #2261ff;
-	--color3: #efe300;
+	--color2: #FF0058;
+	--color1: #00D3FF;
+	--color3: #FFDD00;
 	--grey-10: #eceee8;
 	
 	--gutter: 5%;
@@ -150,12 +150,9 @@ h3 {
 }
 
 h1 {
-	color: var(--color1);
+	color: var(--color2);
 	font-family: var(--logo-font);
 	font-weight: 850;
-	text-shadow: 
-		.1em .1em 0 var(--color2),
-		.15em -.075em 0 var(--color3);
 }
 
 h2 {
