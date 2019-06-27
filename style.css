@@ -205,12 +205,19 @@ article li::before,
 article h3::before {
 	color: var(--color2);
 	content: "◼︎";
-	margin: .2em .3em -.1em -.15em;
+	margin: .2em .3em 0 -.15em;
 }
 
 .action {
 	background-color: var(--color3);
-	padding: .3em 1em .55em;
+	color: inherit;
+	font-family: var(--accent-font);
+	font-size: .85em;
+	font-weight: 700;
+	letter-spacing: .1em;
+	padding: .4em 1em .55em;
+	text-align: center;
+	text-transform: uppercase;
 }
 
 .lead:first-child {
@@ -230,6 +237,7 @@ article h3::before {
 	font-size: 1.25em;
 	justify-content: space-around;
 	padding: 5%;
+	position: relative;
 }
 
 .venn li {
@@ -262,6 +270,19 @@ article h3::before {
 	color: var(--text);
 }
 
+.venn li:nth-child(4) {
+	background: none;
+	font-size: .75em;
+	left: 50%;
+	margin-left: -4em;
+	mix-blend-mode: normal;
+	position: absolute;
+	text-align: center;
+	top: 22%;
+	width: 8em;
+	z-index: 1;
+}
+
 @media (min-width:50em) and (min-height:30em) {
 	body {
 		overflow: hidden;
@@ -269,7 +290,7 @@ article h3::before {
 	.site {
 		display: grid;
 		grid-template-columns: minmax(15em, 20%) 1fr;
-		grid-template-rows: 95vh 5vh;
+		grid-template-rows: 100vh;
 		overflow: hidden;
 		padding: 0;
 	}
@@ -288,13 +309,13 @@ article h3::before {
 		margin-top: auto;
 	}
 	.site > article {
-		grid-row: 1 span 1;
+		grid-row: 1 span 2;
 		overflow-y: auto;
 		padding-left: 0;
 		padding-right: 10%;
 	}
 	.site > footer {
-		grid-row: 2 span 1;
+		grid-row: 3 span 1;
 		margin: auto 0 0;
 		width: 100%;
 	}
